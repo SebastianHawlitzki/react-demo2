@@ -1,26 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+//          value, function
+    const [count, setCount] = useState<number>(0);
+    const [name, setName] = useState<string>("");
+
+
+    const clickHandler = () => {
+        setCount(count + 1);
+
+    }
+const clickHandlerMinus = () => {
+        setCount(count -1)
 }
 
-export default App;
+    return (
+        <>
+            <div className="App">
+                <header className={"App-header"}>
+                    <h1>{count}</h1>
+                    <button onClick={clickHandler}>Click me!</button>
+                    <br/>
+                    <button onClick={clickHandlerMinus}> Verringern</button>
+                </header>
+
+            </div>
+
+
+        </>
+    );
+
+}
+
+
