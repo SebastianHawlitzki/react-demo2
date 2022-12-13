@@ -12,9 +12,9 @@ export default function App() {
         setCount(count + 1);
 
     }
-const clickHandlerMinus = () => {
-        setCount(count -1)
-}
+    const clickHandlerMinus = () => {
+        setCount(count - 1)
+    }
 
     return (
         <>
