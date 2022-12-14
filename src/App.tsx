@@ -8,6 +8,12 @@ export default function App() {
     const [name, setName] = useState<string>("");
 
 
+const [toggleOn, setToggleOn] = useState(false);
+// <button onClick={() => setToggleOm(!toggleOn)}>click me >/button>
+    //{toggleOn === true &&
+    //<h1> Now you see me</h1>
+
+
     const clickHandler = () => {
         setCount(count + 1);
 
